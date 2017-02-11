@@ -15,10 +15,10 @@
   initTable(&Atelier);
   initTable(&Clients);
 
-  status = Atelier.cle1(&Atelier);
+  status = Clients.cle1(&Clients);
   RET(status)
 
-  status = Clients.cle1(&Clients);
+  status = Atelier.cle1(&Atelier);
   RET(status)
 
   return EXIT_SUCCESS;
