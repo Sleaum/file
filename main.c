@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "smartPointer.h"
 #include "error.h"
 #include "baseInterface.h"
 
@@ -10,6 +11,7 @@
   int         status= 0;
   Atelier_t   Atelier;
   Clients_t   Clients;
+  autofree int *mySmartPointer= malloc(64);
 
   initErr();
   initTable(&Atelier);

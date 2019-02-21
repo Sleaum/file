@@ -5,6 +5,7 @@
 #include "error.h"
 #include "atelier.h"
 
+
 static int cle1(Atelier_t * Atelier);
 
 void atelierInit(Atelier_t * Atelier)

@@ -18,16 +18,17 @@ LOCAL VARIABLES
 /*=============================================================================
 GLOBAL VARIABLES
 =============================================================================*/
-const err_t aDataErr[NB_ERR] = {
-  {E_002, "ERROR2"},
-  {E_004, "ERROR4"},
+const err_t aDataErr[NB_ERROR] = {
+  {NO_ERROR, "NO_ERROR"},
   {E_006, "ERROR6"},
-  {E_005, "Blibla5 truc."},
-  {E_003, "Erreur de l’atelier."},
-  {E_001, "ERROR CLIENTS!!"}
+  {E_005, "ERROR5"},
+  {E_004, "ERROR4"},
+  {E_003, "ERROR3"},
+  {E_002, "ERROR2"},
+  {E_001, "ERROR1"}
 };
 
-void * aErr[NB_ERR];
+void * aErr[NB_ERROR];
 
 /*=============================================================================
 LOCAL CONSTANTS
@@ -39,10 +40,10 @@ LOCAL FUNCTIONS
 /*=============================================================================
 GLOBAL FUNCTIONS
 =============================================================================*/
-void initErr()
+void initErr(void)
 {
   int cpt= 0;
-  for(; cpt<NB_ERR; ++cpt) {
+  for(; cpt<NB_ERROR; ++cpt) {
     aErr[aDataErr[cpt].key] = aDataErr[cpt].data;
   }
 }

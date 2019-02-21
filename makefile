@@ -10,10 +10,12 @@ all: $(EXEC)
 test: $(OBJ) 
 	@$(CC) -o $@ $^ $(LDFLAGS)
 
-main.o: error.h baseInterface.h
-error.o: error.h
-atelier.o: error.h atelier.h
-clients.o: error.h clients.h
+main.o:          baseInterface.h error.h smartPointer.h
+baseInterface.o: baseInterface.h
+atelier.o:       atelier.h error.h
+clients.o:       clients.h error.h
+error.o:         error.h
+smartPointer.o:  smartPointer.h
 
 %.o: %.c
 	@$(CC) -o $@ -c $< $(CFLAGS)

@@ -15,9 +15,8 @@ void clientsInit(Clients_t * Clients)
 
 static int cle1(Clients_t * Clients)
 {
-  int err= 0;
+  int err= E_004;
   Clients->str.b = 2;
-  err = Clients->str.b;
   PERR(err)
   return EXIT_SUCCESS;
 }

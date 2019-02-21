@@ -4,10 +4,11 @@
 #include "atelier.h"
 #include "clients.h"
 
+//template
 #define initTable(x) _Generic((x), Atelier_t *:  initAtelier,\
                                    Clients_t *:  initClients)(x)
 
-extern void initAtelier(Atelier_t * Atelier);
-extern void initClients(Clients_t * Clients);
+void initAtelier(Atelier_t * Atelier);
+void initClients(Clients_t * Clients);
 
 #endif
